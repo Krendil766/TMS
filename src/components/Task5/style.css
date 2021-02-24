@@ -1,0 +1,22 @@
+.sqare-big {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    line-height: 500px;
+    margin-bottom: 20px;
+}
+
+.sqare-middle {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(38, 184, 70);
+    line-height: 250px;
+    margin-bottom: 20px;
+}
+
+.sqare-little {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(174, 122, 223);
+    line-height: 50px;
+}
