@@ -78,4 +78,14 @@
 
 .arr-name {
     margin-bottom: 20px;
+    border: 1px solid black;
+    list-style: none;
+}
+
+.task2 {
+    font-size: 50px;
+}
+
+.space {
+    height: 20px;
 }
