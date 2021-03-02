@@ -12,7 +12,7 @@ import data from './data.json'
 // import Task8 from './components/Task8';
 import Task9 from './components/Task9';
 import Task10 from './components/Task10';
-import Task11 from './components/Task11';
+//import Task11 from './components/Task11';
 
 
 
@@ -47,10 +47,12 @@ function App() {
       <Task7 value="Sign In" users="Hello Aleh" arr={data} />
       <Task8 arr={data} /> */}
       <div>Задание на уроке</div>
+      <div>Задание 1 </div>
       <Task9 />
+      <div>Задание 2 </div>
       <Task10 />
       {/* <Task11 loaded /> */}
-      <Task11 />
+      {/* <Task11 /> */}
       
 
     </div>
