@@ -35,6 +35,7 @@ class Task10 extends Component {
 };
   render() {
     const { arr, nameHead, count } = this.state;
+    const { location } = this.props;
     const items = arr.map((item) => {
       return (
         <li key={item + (+new Date()).toString(32)}>
@@ -44,22 +45,75 @@ class Task10 extends Component {
         </li>
       );
     });
-    return (
-      <div>
-        <button onClick={this.onChangeHead}>
-          {nameHead ? "Expand" : "Hide"}
-        </button>
-        <div
-          className="list"
-          style={nameHead ? { display: "none" } : { display: "block" }}
-        >
-          <ul className="ul">
-            {items}
-            <TaskAddItem onAddItem={this.onAddItem} />
-          </ul>
+    if (location == 'top') {
+      return (
+        <div className='container'>
+          <button className = "btn" onClick={this.onChangeHead}>
+            {nameHead ? "Expand" : "Hide"}
+          </button>
+          <div
+            className={location=='top'?'list top':'list'}
+            style={nameHead ? { display: "none" } : { display: "block" }}
+          >
+            <ul className="ul">
+              {items}
+              <TaskAddItem onAddItem={this.onAddItem} />
+            </ul>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else if (location == 'button') {
+      return (
+        <div className='container'>
+          <div
+            className={location=='top'?'list top':'list'}
+            style={nameHead ? { display: "none" } : { display: "block" }}
+          >
+            <ul className="ul">
+              {items}
+              <TaskAddItem onAddItem={this.onAddItem} />
+            </ul>
+          </div>
+          <button className = "btn" onClick={this.onChangeHead}>
+            {nameHead ? "Expand" : "Hide"}
+          </button>
+        </div>
+      );
+    } else if (location == 'right') {
+      return (
+        <div className='container-right'>
+          <button className = "btn" onClick={this.onChangeHead}>
+            {nameHead ? "Expand" : "Hide"}
+          </button>
+          <div
+            className={location=='top'?'list top':'list'}
+            style={nameHead ? { display: "none" } : { display: "block" }}
+          >
+            <ul className="ul">
+              {items}
+              <TaskAddItem onAddItem={this.onAddItem} />
+            </ul>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className='container-right'>
+          <div
+            className={location=='top'?'list top':'list'}
+            style={nameHead ? { display: "none" } : { display: "block" }}
+          >
+            <ul className="ul">
+              {items}
+              <TaskAddItem onAddItem={this.onAddItem} />
+            </ul>
+          </div>
+          <button className = "btn" onClick={this.onChangeHead}>
+            {nameHead ? "Expand" : "Hide"}
+          </button>
+        </div>
+      );
+    }
   }
 }
 class TaskButton extends Component {

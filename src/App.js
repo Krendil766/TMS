@@ -12,11 +12,10 @@ import data from './data.json'
 // import Task8 from './components/Task8';
 import Task9 from './components/Task9';
 import Task10 from './components/Task10';
-//import Task11 from './components/Task11';
-
-
-
-
+import Task11 from './components/Task11';
+import Task12 from './components/Task12';
+import Task13 from './components/Task13';
+import Task14 from './components/Task14';
 
 
 function App() {
@@ -46,15 +45,20 @@ function App() {
       <div className='space'></div>
       <Task7 value="Sign In" users="Hello Aleh" arr={data} />
       <Task8 arr={data} /> */}
-      <div>Задание на уроке</div>
-      <div>Задание 1 </div>
+      <h2>Задание на уроке</h2>
+      <h4>Задание 9 </h4>
       <Task9 />
-      <div>Задание 2 </div>
-      <Task10 />
-      {/* <Task11 loaded /> */}
-      {/* <Task11 /> */}
-      
-
+      <h4>Задание 10 </h4>
+      <Task10 location='button'/>
+      <h4>Задание 11 </h4>
+      <Task11 loaded={false} /> 
+      <h2>Задание на дома</h2>
+      <h4>Задание 12 </h4>
+      <Task12 />
+      <h4>Задание 13 </h4>
+      <Task13 />
+      <h4>Задание 14 </h4>
+      <Task14 />
     </div>
     //</React.Fragment>  </>
   );
