@@ -1,0 +1,50 @@
+.count-span {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    margin-top: 5px;
+}
+
+.form input {
+    width: 130px;
+}
+
+.container {
+    position: relative;
+    height: 300px;
+}
+
+.list {
+    width: 200px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.btn {
+    z-index: 5;
+}
+
+.container-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -9,15 +9,15 @@ class Task4 extends Component {
         this.setState({ newIndex: this.countIndex() })
     }
     countIndex() {
-        if (this.state.newIndex > this.state.value.length - 1) {
-            return 1;
+        if (this.state.newIndex==2) {
+            return this.state.newIndex=0
         } else {
             return this.state.newIndex + 1;
         }
     }
     render() {
         return (
-            <div style={{ fontSize: 50 + 'px' }} onClick={this.setting}>{this.state.value[this.state.newIndex] || this.state.value[0]}</div>
+            <div style={{ fontSize: 50 + 'px' }} onClick={this.setting}>{this.state.value[this.state.newIndex]}</div>
         )
     }
 }
